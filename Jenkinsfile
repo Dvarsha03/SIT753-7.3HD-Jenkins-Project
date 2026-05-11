@@ -23,12 +23,12 @@ pipeline {
             }
         }
 
-        stage('Code Quality') {
-            steps {
-                echo 'Running code quality check...'
-                bat 'npx eslint . || exit 0'
-            }
-        }
+       stage('Code Quality') {
+    steps {
+        echo 'Running code quality analysis using ESLint...'
+        bat 'npx eslint .'
+    }
+}
 
         stage('Security') {
             steps {
